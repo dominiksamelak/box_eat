@@ -1,141 +1,275 @@
 .page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .main {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  position: relative;
+  padding: 40px 60px 120px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
-}
-
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
-}
-
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
-}
-
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
+.hero {
   width: fit-content;
+  max-width: 100%;
+  margin-bottom: 100px;
+  z-index: 2;
+  position: relative;
+}
+
+.headline {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #171717;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.slogan {
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.sloganText {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2d5016;
+  display: inline-block;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.sloganLine {
+  display: none;
+}
+
+.slogan::before,
+.slogan::after {
+  content: "";
+  height: 2px;
+  background-color: #2d5016;
+  flex: 1 1 auto;
+}
+
+.description {
+  font-size: 18px;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.ctaPrimary {
+  background-color: #2d5016;
+  color: #ffffff;
+}
+
+.ctaPrimary:hover {
+  background-color: #3fd34f;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(63, 211, 79, 0.35);
+  transform: translateY(-1px);
+}
+
+.ctaSecondary {
+  background-color: #2d5016;
+  color: #ffffff;
+}
+
+.ctaSecondary:hover {
+  background-color: #3fd34f;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(63, 211, 79, 0.35);
+  transform: translateY(-1px);
+}
+
+.visualElements {
+  position: relative;
+  min-height: 600px;
+  margin-top: 40px;
+}
+
+.sushiBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 350px;
+  z-index: 1;
+}
+
+.phone {
+  position: absolute;
+  bottom: 20px;
+  right: 220px;
+  width: 200px;
+  height: 400px;
+  z-index: 1;
+}
+
+.vendingMachine {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 300px;
+  height: 500px;
+  z-index: 1;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  border: 2px dashed #cccccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.placeholder p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666666;
+  margin-bottom: 8px;
+}
+
+.placeholderSubtext {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: #999999 !important;
+  line-height: 1.4;
+}
+
+.ingredients {
+  position: absolute;
+  top: 120px;
+  right: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 0;
+}
+
+.ingredient {
+  padding: 8px 16px;
+  background-color: rgba(45, 80, 22, 0.1);
+  border-radius: 20px;
+  font-size: 12px;
+  color: #2d5016;
   font-weight: 500;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--button-secondary-border);
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+@media (max-width: 1200px) {
+  .vendingMachine {
+    right: -50px;
   }
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
+  .phone {
+    right: 100px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 968px) {
   .main {
-    padding: 48px 24px;
+    padding: 40px 24px 80px;
   }
 
-  .intro {
-    gap: 16px;
+  .hero {
+    width: 100%;
   }
 
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
+  .headline {
+    font-size: 42px;
+    white-space: normal;
+  }
+
+  .sushiBox {
+    width: 300px;
+    height: 280px;
+  }
+
+  .phone {
+    width: 150px;
+    height: 300px;
+    right: 50px;
+  }
+
+  .vendingMachine {
+    width: 200px;
+    height: 350px;
+  }
+
+  .ingredients {
+    display: none;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+@media (max-width: 768px) {
+  .headline {
+    font-size: 32px;
   }
 
-  .page {
-    --background: #000;
-    --foreground: #000;
+  .description {
+    font-size: 16px;
+  }
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
+  .visualElements {
+    min-height: 400px;
+  }
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+  .sushiBox {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    margin: 40px auto;
+  }
+
+  .phone {
+    position: relative;
+    width: 150px;
+    height: 280px;
+    margin: 20px auto;
+    right: auto;
+  }
+
+  .vendingMachine {
+    position: relative;
+    width: 200px;
+    height: 320px;
+    margin: 20px auto;
+    right: auto;
+    top: auto;
   }
 }

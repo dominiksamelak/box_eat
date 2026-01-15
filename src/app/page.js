@@ -1,64 +1,66 @@
-import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <Navbar />
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+        <div className={styles.hero}>
+          <h1 className={styles.headline}>
+            ŚWIEŻE SUSHI I GOTOWE POSIŁKI 24/7
+          </h1>
+          <div className={styles.slogan}>
+            <span className={styles.sloganText}>
+              BOX EAT – z miłości do jakości
+            </span>
+            <div className={styles.sloganLine}></div>
+          </div>
+          <p className={styles.description}>
+            Inteligentny vending premium. Odbierz zestaw w 15 sekund
           </p>
+          <div className={styles.ctaButtons}>
+            <Link href="/menu" className={styles.ctaPrimary}>ZOBACZ MENU</Link>
+            <Link href="/znajdz-automat" className={styles.ctaSecondary}>ZNAJDŹ AUTOMAT</Link>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className={styles.visualElements}>
+          <div className={styles.sushiBox}>
+            <div className={styles.placeholder}>
+              <p>Sushi Box Placeholder</p>
+              <p className={styles.placeholderSubtext}>
+                Image of sushi platter with various sushi pieces, nigiri, maki rolls, and inari sushi
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.phone}>
+            <div className={styles.placeholder}>
+              <p>Mobile Phone Placeholder</p>
+              <p className={styles.placeholderSubtext}>
+                Image of smartphone displaying BOX EAT mobile website
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.vendingMachine}>
+            <div className={styles.placeholder}>
+              <p>Vending Machine Placeholder</p>
+              <p className={styles.placeholderSubtext}>
+                Image of dark green vending machine with BOX EAT branding
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.ingredients}>
+            <div className={styles.ingredient}>Cucumber</div>
+            <div className={styles.ingredient}>Chili</div>
+            <div className={styles.ingredient}>Cilantro</div>
+            <div className={styles.ingredient}>Edamame</div>
+            <div className={styles.ingredient}>Lime</div>
+          </div>
         </div>
       </main>
     </div>
