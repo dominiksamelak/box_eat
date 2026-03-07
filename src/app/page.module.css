@@ -15,7 +15,7 @@
 .hero {
   width: fit-content;
   max-width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   z-index: 2;
   position: relative;
 }
@@ -81,7 +81,11 @@
   font-weight: 500;
   cursor: pointer;
   border: none;
-  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
   display: inline-block;
   text-decoration: none;
 }
@@ -118,29 +122,49 @@
 
 .sushiBox {
   position: absolute;
-  bottom: 0;
+  /* bottom: 80px; */
   left: 0;
-  width: 400px;
-  height: 350px;
+  width: 600px;
+  height: 432px;
   z-index: 1;
 }
 
-.phone {
+.veg {
   position: absolute;
-  bottom: 20px;
-  right: 220px;
-  width: 200px;
-  height: 400px;
-  z-index: 1;
+  right: 80px;
+  width: 670px;
+  height: 805px;
+  top: 6px;
+  z-index: 0;
 }
 
 .vendingMachine {
   position: absolute;
-  top: -20px;
+  top: -140px;
   right: 0;
-  width: 300px;
-  height: 500px;
-  z-index: 1;
+  width: auto;
+  height: auto;
+  z-index: 0;
+}
+
+.vendingImage {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
 }
 
 .placeholder {
@@ -220,14 +244,13 @@
   }
 
   .phone {
-    width: 150px;
-    height: 300px;
+    width: 120px;
+    height: 240px;
     right: 50px;
   }
 
   .vendingMachine {
-    width: 200px;
-    height: 350px;
+    max-width: 200px;
   }
 
   .ingredients {
@@ -258,16 +281,15 @@
 
   .phone {
     position: relative;
-    width: 150px;
-    height: 280px;
+    width: 120px;
+    height: 224px;
     margin: 20px auto;
     right: auto;
   }
 
   .vendingMachine {
     position: relative;
-    width: 200px;
-    height: 320px;
+    max-width: 200px;
     margin: 20px auto;
     right: auto;
     top: auto;

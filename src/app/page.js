@@ -1,6 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
+import sushiBoxImg from "../img/sushi-box.png";
+import vegImg from "../img/veg.png";
+import vendingImg from "../img/vending.png";
 
 export default function Home() {
   return (
@@ -21,45 +25,47 @@ export default function Home() {
             Inteligentny vending premium. Odbierz zestaw w 15 sekund
           </p>
           <div className={styles.ctaButtons}>
-            <Link href="/menu" className={styles.ctaPrimary}>ZOBACZ MENU</Link>
-            <Link href="/znajdz-automat" className={styles.ctaSecondary}>ZNAJDŹ AUTOMAT</Link>
+            <Link href="/menu" className={styles.ctaPrimary}>
+              ZOBACZ MENU
+            </Link>
+            <Link href="/znajdz-automat" className={styles.ctaSecondary}>
+              ZNAJDŹ AUTOMAT
+            </Link>
+          </div>
+        </div>
+
+        <div className={styles.veg}>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={vegImg}
+              alt="Smartphone displaying BOX EAT mobile website"
+              fill
+              className={styles.heroImage}
+            />
           </div>
         </div>
 
         <div className={styles.visualElements}>
           <div className={styles.sushiBox}>
-            <div className={styles.placeholder}>
-              <p>Sushi Box Placeholder</p>
-              <p className={styles.placeholderSubtext}>
-                Image of sushi platter with various sushi pieces, nigiri, maki rolls, and inari sushi
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.phone}>
-            <div className={styles.placeholder}>
-              <p>Mobile Phone Placeholder</p>
-              <p className={styles.placeholderSubtext}>
-                Image of smartphone displaying BOX EAT mobile website
-              </p>
+            <div className={styles.imageWrapper}>
+              <Image
+                src={sushiBoxImg}
+                alt="Sushi platter with various sushi pieces, nigiri, maki rolls, and inari sushi"
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className={styles.heroImage}
+              />
             </div>
           </div>
 
           <div className={styles.vendingMachine}>
-            <div className={styles.placeholder}>
-              <p>Vending Machine Placeholder</p>
-              <p className={styles.placeholderSubtext}>
-                Image of dark green vending machine with BOX EAT branding
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.ingredients}>
-            <div className={styles.ingredient}>Cucumber</div>
-            <div className={styles.ingredient}>Chili</div>
-            <div className={styles.ingredient}>Cilantro</div>
-            <div className={styles.ingredient}>Edamame</div>
-            <div className={styles.ingredient}>Lime</div>
+            <Image
+              src={vendingImg}
+              alt="Dark green vending machine with BOX EAT branding"
+              width={vendingImg.width}
+              height={vendingImg.height}
+              className={styles.vendingImage}
+            />
           </div>
         </div>
       </main>
