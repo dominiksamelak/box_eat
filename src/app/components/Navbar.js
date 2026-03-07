@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <Link href="/" className={styles.logo}>
-        BOX EAT
+        <span className={styles.logoBox}>BOX</span> EAT
       </Link>
       <div className={styles.navLinks}>
         <Link href="/menu">Menu</Link>

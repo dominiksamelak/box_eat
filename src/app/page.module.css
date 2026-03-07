@@ -21,7 +21,7 @@
 }
 
 .headline {
-  font-size: 56px;
+  font-size: 42px;
   font-weight: 700;
   line-height: 1.2;
   color: #171717;
@@ -37,6 +37,7 @@
   align-items: center;
   gap: 16px;
   width: 100%;
+  color: #2d5016;
 }
 
 .sloganText {
@@ -139,20 +140,19 @@
 }
 
 .vendingMachine {
-  position: absolute;
-  top: -140px;
   right: 0;
-  width: auto;
-  height: auto;
   z-index: 0;
 }
 
 .vendingImage {
-  display: block;
   width: auto;
   height: auto;
-  max-width: 100%;
+  max-width: 40%;
   object-fit: contain;
+  right: 10px;
+  position: absolute;
+  top: -110px;
+  z-index: 0;
 }
 
 .imageWrapper {

@@ -16,6 +16,10 @@
   text-decoration: none;
 }
 
+.logoBox {
+  color: #3fd34f;
+}
+
 .navLinks {
   display: flex;
   align-items: center;
