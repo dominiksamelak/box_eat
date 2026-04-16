@@ -1,0 +1,58 @@
+.footer {
+  margin-top: 56px;
+  border-top: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 60px;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2d5016;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+
+.logoBox {
+  color: #3fd34f;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+}
+
+.links a {
+  color: #171717;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: #2d5016;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 24px 24px 28px;
+  }
+
+  .logo {
+    margin-bottom: 14px;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
