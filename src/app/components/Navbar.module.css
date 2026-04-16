@@ -7,8 +7,27 @@
   max-width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #f0f0f0;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1111;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.navbarSpacer {
+  width: 100%;
+}
+
+.navbarScrolled {
+  background-color: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+}
+
+.navbarHidden {
+  transform: translateY(calc(-100% - 8px));
 }
 
 .logo {
