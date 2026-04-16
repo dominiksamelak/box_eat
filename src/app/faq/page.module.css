@@ -12,14 +12,47 @@
 .title {
   font-size: 48px;
   font-weight: 700;
-  color: #171717;
+  color: #3fd34f;
   margin-bottom: 40px;
 }
 
 .content {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
-  color: #666666;
+  color: #4b5563;
+}
+
+.item {
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  background-color: #f9fafb;
+}
+
+.item[open] {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #111827;
+  list-style: none;
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.list {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.listItem + .listItem {
+  margin-top: 4px;
 }
 
 @media (max-width: 768px) {

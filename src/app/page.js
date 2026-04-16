@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
+import ZestawySlider from "./components/ZestawySlider";
 import sushiBoxImg from "../img/sushi-box.png";
 import vegImg from "../img/veg.png";
 import vendingImg from "../img/vending.png";
@@ -32,8 +33,23 @@ export default function Home() {
               ZNAJDŹ AUTOMAT
             </Link>
           </div>
-        </div>
 
+          <div className={styles.showcase}>
+            <div className={styles.sliderWrap}>
+              <ZestawySlider />
+            </div>
+            <div className={styles.vendingMachine}>
+              <Image
+                src={vendingImg}
+                alt="Dark green vending machine with BOX EAT branding"
+                width={vendingImg.width}
+                height={vendingImg.height}
+                className={styles.vendingImage}
+              />
+            </div>
+          </div>
+        </div>
+        {/* 
         <div className={styles.veg}>
           <div className={styles.imageWrapper}>
             <Image
@@ -43,31 +59,9 @@ export default function Home() {
               className={styles.heroImage}
             />
           </div>
-        </div>
+        </div> */}
 
-        <div className={styles.visualElements}>
-          <div className={styles.sushiBox}>
-            <div className={styles.imageWrapper}>
-              <Image
-                src={sushiBoxImg}
-                alt="Sushi platter with various sushi pieces, nigiri, maki rolls, and inari sushi"
-                fill
-                sizes="(max-width: 768px) 100vw, 400px"
-                className={styles.heroImage}
-              />
-            </div>
-          </div>
-
-          <div className={styles.vendingMachine}>
-            <Image
-              src={vendingImg}
-              alt="Dark green vending machine with BOX EAT branding"
-              width={vendingImg.width}
-              height={vendingImg.height}
-              className={styles.vendingImage}
-            />
-          </div>
-        </div>
+        
       </main>
     </div>
   );

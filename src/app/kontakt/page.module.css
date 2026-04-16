@@ -12,7 +12,7 @@
 .title {
   font-size: 48px;
   font-weight: 700;
-  color: #171717;
+  color: #3fd34f;
   margin-bottom: 40px;
 }
 
@@ -20,6 +20,49 @@
   font-size: 18px;
   line-height: 1.8;
   color: #666666;
+}
+
+.intro {
+  margin: -12px 0 16px;
+  color: #4b5563;
+  color: #171717;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.card {
+  max-width: 560px;
+
+  /* border: 1px solid #e5e7eb; */
+  border-radius: 20px;
+  padding: 20px 24px;
+}
+
+.row + .row {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e7eb;
+  max-width: 200px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.value {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d5016;
+  text-decoration: none;
+}
+
+.value:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
