@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
-import ZestawySlider from "./components/ZestawySlider";
 import vendingImg from "../img/vending.png";
 import mainPic1Img from "../img/main-pic-1.jpg";
 import mainPic2Img from "../img/main-pic-2.jpg";
@@ -36,9 +35,6 @@ export default function Home() {
           </div>
 
           <div className={styles.showcase}>
-            <div className={styles.sliderWrap}>
-              <ZestawySlider />
-            </div>
             <div className={styles.vendingMachine}>
               <Image
                 src={vendingImg}

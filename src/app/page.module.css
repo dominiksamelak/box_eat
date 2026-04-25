@@ -83,16 +83,9 @@
   margin-top: 18px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 62px;
+  justify-content: flex-end;
+  gap: 0;
   /* z-index: 111; */
-}
-
-.sliderWrap {
-  /* margin-top: 20px; */
-  display: flex;
-  justify-content: flex-start;
-  flex: 0 0 auto;
 }
 
 .ctaPrimary,
@@ -377,16 +370,9 @@
 
   .showcase {
     margin-top: 16px;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     gap: 14px;
-  }
-
-  .sliderWrap {
-    width: 100%;
-    justify-content: center;
-    /* box-shadow: 0 4px 12px rgba(31, 71, 54, 0.18); */
-    margin-top: 20px;
   }
 
   .sushiBox {
