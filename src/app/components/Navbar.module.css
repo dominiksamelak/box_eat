@@ -5,8 +5,8 @@
   padding: 20px 60px;
   width: 100%;
   max-width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #f0f0f0;
+  background-color: #1f4736;
+  border-bottom: 1px solid rgba(237, 222, 193, 0.22);
   position: fixed;
   top: 0;
   left: 0;
@@ -22,8 +22,8 @@
 }
 
 .navbarScrolled {
-  background-color: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+  background-color: rgba(31, 71, 54, 0.96);
+  box-shadow: 0 8px 24px rgba(12, 31, 24, 0.35);
 }
 
 .navbarHidden {
@@ -33,12 +33,12 @@
 .logo {
   font-size: 24px;
   font-weight: 700;
-  color: #2d5016;
+  color: #eddec1;
   text-decoration: none;
 }
 
 .logoBox {
-  color: #3fd34f;
+  color: #eddec1;
 }
 
 .navLinks {
@@ -49,8 +49,8 @@
 
 .menuToggle {
   display: none;
-  background-color: transparent;
-  border: 1px solid #e5e7eb;
+  background-color: rgba(237, 222, 193, 0.12);
+  border: 1px solid rgba(237, 222, 193, 0.45);
   border-radius: 12px;
   cursor: pointer;
   width: 44px;
@@ -67,13 +67,13 @@
   display: block;
   width: 22px;
   height: 2px;
-  background-color: #171717;
+  background-color: #eddec1;
   border-radius: 999px;
   transition: background-color 0.2s;
 }
 
 .navLinks a {
-  color: #171717;
+  color: #eddec1;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
@@ -81,12 +81,12 @@
 }
 
 .navLinks a:hover {
-  color: #2d5016;
+  color: #ffffff;
 }
 
 .orderButton {
-  background-color: #3fd34f;
-  color: #ffffff !important;
+  background-color: #eddec1;
+  color: #1f4736 !important;
   padding: 10px 20px;
   border-radius: 999px;
   font-weight: 500;
@@ -97,9 +97,9 @@
 }
 
 .orderButton:hover {
-  background-color: #34bd46;
-  color: #ffffff !important;
-  box-shadow: 0 6px 16px rgba(63, 211, 79, 0.35);
+  background-color: #f5ead4;
+  color: #1f4736 !important;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); */
   transform: translateY(-1px);
 }
 
@@ -110,12 +110,12 @@
 
   .navLinks {
     position: absolute;
-    top: 60px;
-    right: 24px;
-    left: 24px;
+    top: 100%;
+    right: 0;
+    left: 0;
     padding: 16px 20px;
-    background-color: #ffffff;
-    border-radius: 16px;
+    background-color: #1f4736;
+    /* border-radius: 16px; */
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
     flex-direction: column;
     align-items: flex-start;

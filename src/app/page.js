@@ -3,9 +3,10 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
 import ZestawySlider from "./components/ZestawySlider";
-import sushiBoxImg from "../img/sushi-box.png";
-import vegImg from "../img/veg.png";
 import vendingImg from "../img/vending.png";
+import mainPic1Img from "../img/main-pic-1.jpg";
+import mainPic2Img from "../img/main-pic-2.jpg";
+import boxtokyoImg from "../img/boxtokyo.png";
 
 export default function Home() {
   return (
@@ -49,7 +50,52 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* 
+
+        <section className={styles.infoSection}>
+          <div className={styles.infoRow}>
+            <div className={styles.infoImageWrap}>
+              <Image
+                src={mainPic2Img}
+                alt="BOX EAT nowoczesna koncepcja sprzedaży świeżych posiłków"
+                width={mainPic2Img.width}
+                height={mainPic2Img.height}
+                className={styles.infoImage}
+              />
+            </div>
+            <p className={styles.infoText}>
+              BOX EAT to nowoczesna koncepcja sprzedaży świeżych posiłków, która
+              łączy technologię, jakość premium i pełną dostępność.
+            </p>
+          </div>
+
+          <div className={styles.infoRow}>
+            <p className={styles.infoText}>
+              Tworzymy miejsca, w których możesz sięgnąć po starannie
+              przygotowane sushi i dania gotowe - szybko, wygodnie i bez
+              kompromisów.
+            </p>
+            <div className={styles.infoImageWrap}>
+              <Image
+                src={mainPic1Img}
+                alt="Starannie przygotowane sushi i dania gotowe BOX EAT"
+                width={mainPic1Img.width}
+                height={mainPic1Img.height}
+                className={styles.infoImage}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.boxTokyoSection}>
+          <Image
+            src={boxtokyoImg}
+            alt="BOX TOKYO"
+            width={boxtokyoImg.width}
+            height={boxtokyoImg.height}
+            className={styles.boxTokyoImage}
+          />
+        </section>
+        {/*
         <div className={styles.veg}>
           <div className={styles.imageWrapper}>
             <Image

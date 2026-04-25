@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
+import PageTransition from "./components/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +22,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pl">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className="siteContent">{children}</div>
+        <PageTransition>
+          <div className="siteContent">{children}</div>
+        </PageTransition>
         <Footer />
       </body>
     </html>

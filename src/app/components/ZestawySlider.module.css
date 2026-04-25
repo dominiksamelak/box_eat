@@ -6,7 +6,7 @@
   border-radius: 20px;
   overflow: hidden;
   background-color: #f3f4f6;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08); */
 }
 
 .slide {
@@ -14,7 +14,9 @@
   inset: 0;
   opacity: 0;
   transform: scale(1.02);
-  transition: opacity 600ms ease, transform 600ms ease;
+  transition:
+    opacity 600ms ease,
+    transform 600ms ease;
   will-change: opacity, transform;
 }
 
@@ -32,4 +34,3 @@
     transition: none;
   }
 }
-

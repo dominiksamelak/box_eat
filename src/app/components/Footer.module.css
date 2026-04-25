@@ -1,7 +1,7 @@
 .footer {
   margin-top: 56px;
-  border-top: 1px solid #e5e7eb;
-  background-color: #ffffff;
+  border-top: 1px solid rgba(237, 222, 193, 0.22);
+  background-color: #1f4736;
 }
 
 .inner {
@@ -14,13 +14,13 @@
   display: inline-block;
   font-size: 24px;
   font-weight: 700;
-  color: #2d5016;
+  color: #eddec1;
   text-decoration: none;
   margin-bottom: 18px;
 }
 
 .logoBox {
-  color: #3fd34f;
+  color: #eddec1;
 }
 
 .links {
@@ -30,17 +30,20 @@
 }
 
 .links a {
-  color: #171717;
+  color: #eddec1;
   text-decoration: none;
   font-size: 16px;
   transition: color 0.2s;
 }
 
 .links a:hover {
-  color: #2d5016;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
+  .footer {
+    margin-top: 18px;
+  }
   .inner {
     padding: 24px 24px 28px;
   }
@@ -55,4 +58,3 @@
     gap: 10px;
   }
 }
-

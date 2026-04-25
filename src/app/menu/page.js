@@ -94,7 +94,7 @@ const zestawy = [
   {
     id: 7,
     name: "Chef’s Choice",
-    pieces: "15 sztuk",
+    pieces: "15 kawałków",
     img: zestaw7Img,
     description: [
       "2 x maki dorada, ogórek, omlet",
