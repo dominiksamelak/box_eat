@@ -1,6 +1,6 @@
 .page {
   min-height: 100%;
-  background-color: #ffffff;
+  background-color: var(--background);
 }
 
 .main {
@@ -12,7 +12,7 @@
 .title {
   font-size: 48px;
   font-weight: 700;
-  color: #1f4736;
+  color: var(--site-text);
   margin-bottom: 40px;
 }
 
@@ -24,7 +24,7 @@
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 24px;
-  color: #171717;
+  color: var(--site-text-muted);
 }
 
 .grid {
@@ -36,10 +36,11 @@
 .card {
   display: flex;
   flex-direction: column;
-  background-color: #f9fafb;
+  background-color: var(--site-surface);
+  border: 1px solid var(--site-border);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
 
 .imageWrapper {
@@ -63,13 +64,13 @@
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #111827;
+  color: var(--site-text);
 }
 
 .cardPieces {
   font-size: 16px;
-  font-weight: 500;
-  color: #059669;
+  font-weight: 600;
+  color: var(--site-accent);
   margin-left: 8px;
 }
 
@@ -78,7 +79,7 @@
   padding-left: 18px;
   font-size: 15px;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--site-text-muted);
 }
 
 .listItem + .listItem {
@@ -88,7 +89,7 @@
 .extras {
   margin-top: 12px;
   font-size: 14px;
-  color: #6b7280;
+  color: var(--site-text-soft);
 }
 
 @media (max-width: 768px) {

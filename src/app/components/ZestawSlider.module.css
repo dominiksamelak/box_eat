@@ -1,0 +1,59 @@
+.zestawSliderViewport {
+  position: relative;
+  width: min(900px, 100%);
+  margin: 0 auto 18px;
+}
+
+.zestawSliderTrack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  transition: opacity 650ms ease-in-out;
+}
+
+.zestawCurrentTrack {
+  position: relative;
+}
+
+.zestawNextTrack {
+  position: absolute;
+  inset: 0;
+}
+
+.trackVisible {
+  opacity: 1;
+}
+
+.trackHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.zestawCard {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+.zestawImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .zestawSliderTrack {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .zestawSliderViewport {
+    margin-bottom: 14px;
+  }
+
+  .zestawImage {
+    height: 220px;
+  }
+}

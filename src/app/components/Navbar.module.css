@@ -5,7 +5,7 @@
   padding: 20px 60px;
   width: 100%;
   max-width: 100%;
-  background-color: #1f4736;
+  background-color: var(--background);
   border-bottom: 1px solid rgba(237, 222, 193, 0.22);
   position: fixed;
   top: 0;
@@ -22,7 +22,7 @@
 }
 
 .navbarScrolled {
-  background-color: rgba(31, 71, 54, 0.96);
+  background-color: rgba(21, 42, 34, 0.94);
   box-shadow: 0 8px 24px rgba(12, 31, 24, 0.35);
 }
 

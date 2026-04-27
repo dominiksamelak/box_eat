@@ -1,7 +1,18 @@
 :root {
-  --background: #ffffff;
+  --background: #152a22;
   --foreground: #171717;
   --primary-green: #2d5016;
+  /* Shared dark theme (subpages + surfaces) */
+  --site-surface: #1f4736;
+  --site-text: #eddec1;
+  --site-text-muted: rgba(237, 222, 193, 0.85);
+  --site-text-soft: rgba(237, 222, 193, 0.68);
+  --site-border: rgba(237, 222, 193, 0.22);
+  --site-accent: #b8dfc8;
+}
+
+html {
+  background-color: var(--background);
 }
 
 html,
@@ -12,7 +23,7 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background-color: var(--background);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

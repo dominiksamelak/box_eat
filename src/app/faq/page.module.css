@@ -1,6 +1,6 @@
 .page {
   min-height: 100%;
-  background-color: #ffffff;
+  background-color: var(--background);
 }
 
 .main {
@@ -12,33 +12,33 @@
 .title {
   font-size: 48px;
   font-weight: 700;
-  color: #1f4736;
+  color: var(--site-text);
   margin-bottom: 40px;
 }
 
 .content {
   font-size: 16px;
   line-height: 1.8;
-  color: #4b5563;
+  color: var(--site-text-muted);
 }
 
 .item {
   border-radius: 16px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--site-border);
   padding: 16px 20px;
   margin-bottom: 16px;
-  background-color: #f9fafb;
+  background-color: var(--site-surface);
 }
 
 .item[open] {
-  background-color: #eff6ff;
-  border-color: #bfdbfe;
+  background-color: rgba(31, 71, 54, 0.95);
+  border-color: rgba(237, 222, 193, 0.35);
 }
 
 .summary {
   cursor: pointer;
   font-weight: 600;
-  color: #111827;
+  color: var(--site-text);
   list-style: none;
 }
 
@@ -49,6 +49,7 @@
 .list {
   margin-top: 12px;
   padding-left: 20px;
+  color: var(--site-text-muted);
 }
 
 .listItem + .listItem {

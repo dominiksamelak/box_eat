@@ -1,147 +1,102 @@
 .page {
   min-height: 100%;
-  background-color: #ffffff;
+  background-color: var(--background);
   position: relative;
   overflow-x: hidden;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.main {
-  position: relative;
-  padding: 40px 60px 20px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.hero {
+.mainHome {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
-  z-index: 2;
+}
+
+.heroSplit {
   position: relative;
+  width: 100%;
+  flex: 1 0 auto;
 }
 
-.headline {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #1f4736;
-  margin-bottom: 20px;
-  letter-spacing: -1px;
-  white-space: nowrap;
-  text-align: center;
-}
-
-.zestawSliderViewport {
-  position: relative;
-  width: min(900px, 100%);
-  margin: 0 auto 18px;
-}
-
-.zestawSliderTrack {
+.heroSplitImages {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
   width: 100%;
-  transition: opacity 650ms ease-in-out;
+  min-height: clamp(260px, 36vw, 520px);
 }
 
-.zestawCurrentTrack {
+.heroSplitCell {
   position: relative;
+  min-height: clamp(260px, 36vw, 520px);
+  overflow: hidden;
 }
 
-.zestawNextTrack {
+.heroSplitImg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroSplitOverlay {
   position: absolute;
   inset: 0;
-}
-
-.trackVisible {
-  opacity: 1;
-}
-
-.trackHidden {
-  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 71, 54, 0.5) 0%,
+    rgba(0, 0, 0, 0.38) 100%
+  );
   pointer-events: none;
 }
 
-.zestawCard {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
-}
-
-.zestawImage {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  display: block;
-}
-
-.slogan {
-  margin-top: 34px;
-  margin-bottom: 34px;
-  position: relative;
+.heroSplitContent {
+  pointer-events: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
-  width: 100vw;
-  margin-left: 0;
-  margin-right: 0;
-  left: calc(50% - 50vw);
-  color: #1f4736;
+  text-align: center;
+  gap: 14px;
+  padding: 24px 16px;
+  max-width: min(920px, 100%);
 }
 
-.sloganText {
-  font-size: 20px;
-  font-weight: 500;
-  color: #1f4736;
-  display: inline-block;
-  margin-bottom: 0;
-  white-space: nowrap;
-}
-
-.sloganLine {
-  display: none;
-}
-
-.slogan::before,
-.slogan::after {
-  content: "";
-  height: 2px;
-  background-color: #1f4736;
-  flex: 1 1 auto;
-}
-
-.description {
-  font-size: 24px;
-  font-weight: 600;
+.heroSplitTitle {
+  font-size: clamp(20px, 3.4vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
   color: #eddec1;
-  line-height: 1.35;
-  margin: 20px 0 28px;
-  padding: 18px 26px 18px clamp(140px, 24vw, 320px);
-  width: min(760px, calc(100vw - 24px));
-  position: relative;
-  left: calc(50% - 50vw);
-  background-color: #1f4736;
-  border-radius: 0 14px 14px 0;
-  text-align: left;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-wrap: balance;
 }
 
-.ctaButtons {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 40px;
+.heroSplitTagline {
+  font-size: clamp(15px, 1.9vw, 22px);
+  font-weight: 600;
+  line-height: 1.45;
+  color: #eddec1;
+  margin: 0;
 }
 
-.showcase {
-  margin-top: 8px;
+.heroSplitCtas {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
-  align-items: center;
-  gap: 32px 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 10px;
+  width: min(520px, 100%);
+  justify-content: center;
+}
+
+.heroSplitCtas .ctaPrimary,
+.heroSplitCtas .ctaSecondary {
   width: 100%;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .ctaPrimary,
@@ -169,7 +124,6 @@
 .ctaPrimary:hover {
   background-color: #eddec1;
   color: #1f4736;
-  /* box-shadow: 0 6px 16px rgba(63, 211, 79, 0.35); */
   transform: translateY(-1px);
 }
 
@@ -181,281 +135,301 @@
 .ctaSecondary:hover {
   background-color: #eddec1;
   color: #1f4736;
-  /* box-shadow: 0 6px 16px rgba(63, 211, 79, 0.35); */
   transform: translateY(-1px);
 }
 
-.vendingMachine {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: -20px;
-  min-width: 0;
-}
-
-.vendingImage {
-  width: auto;
-  height: auto;
-  max-width: 640px;
-  object-fit: contain;
-  position: relative;
-}
-
-.infoText {
-  font-size: 24px;
-  line-height: 1.45;
-  color: #1f4736;
-  font-weight: 500;
-  margin: 0;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 10px 28px rgba(31, 71, 54, 0.3);
-  text-align: left;
-  min-width: 0;
-}
-
-.boxTokyoSection {
-  margin-top: 48px;
-  display: flex;
-  justify-content: center;
-}
-
-.boxTokyoImage {
-  width: 30%;
-  height: auto;
-  display: block;
-}
-
-.imageWrapper {
-  position: relative;
+.whySection {
   width: 100%;
-  height: 100%;
-  /* border-radius: 8px; */
-  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 68px) clamp(20px, 4vw, 48px) clamp(48px, 8vw, 68px);
 }
 
-.heroImage {
-  object-fit: cover;
+.whyHeading {
+  font-size: clamp(32px, 5.5vw, 52px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #eddec1;
+  text-align: center;
+  margin: 0 0 clamp(32px, 5vw, 68px);
+  letter-spacing: -0.02em;
 }
 
-.placeholder {
-  width: 100%;
-  height: 100%;
-  background-color: #f5f5f5;
-  border: 2px dashed #cccccc;
-  border-radius: 8px;
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 28px);
+  align-items: start;
+}
+
+.whyItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
+  gap: 16px;
   text-align: center;
 }
 
-.placeholder p {
-  font-size: 16px;
+.whyImagePanel {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(20px, 4vw, 32px);
+  background-color: #1f4736;
+  border: 1px solid rgba(237, 222, 193, 0.22);
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.whyIconImage {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: clamp(72px, 12vw, 112px);
+  object-fit: contain;
+}
+
+.whyCaption {
+  margin: 0;
+  font-size: clamp(16px, 2vw, 20px);
   font-weight: 600;
-  color: #666666;
-  margin-bottom: 8px;
+  line-height: 1.35;
+  color: #eddec1;
 }
 
-.placeholderSubtext {
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  color: #999999 !important;
-  line-height: 1.4;
+.zestawHowSection {
+  width: 100%;
+  padding: 0 clamp(20px, 4vw, 48px) clamp(48px, 8vw, 96px);
 }
 
-.ingredients {
-  position: absolute;
-  top: 120px;
-  right: 80px;
+.zestawHowInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.zestawHowGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.85fr);
+  gap: clamp(28px, 4vw, 48px);
+  align-items: start;
+}
+
+.zestawHowLeft {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  z-index: 0;
+  gap: 18px;
+  min-width: 0;
+  align-items: flex-start;
 }
 
-.ingredient {
-  padding: 8px 16px;
-  background-color: rgba(45, 80, 22, 0.1);
-  border-radius: 20px;
-  font-size: 12px;
-  color: #2d5016;
+.zestawHowSetTitle {
+  margin: 0;
+  font-size: clamp(28px, 4.2vw, 44px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #eddec1;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.zestawHowRight {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.howTitle {
+  margin: 0;
+  font-size: clamp(26px, 3.8vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #eddec1;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.howIntro {
+  margin: 0;
+  font-size: clamp(15px, 1.8vw, 18px);
   font-weight: 500;
+  line-height: 1.55;
+  color: #eddec1;
+  text-align: left;
+  max-width: 36ch;
 }
 
-@media (max-width: 1200px) {
-  .vendingMachine {
-    margin-right: -10px;
+.howStepsGrid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  grid-template-rows: auto auto;
+  row-gap: 12px;
+  column-gap: 0;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.howIconCell {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.howIconCol1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.howArrowCol2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.howIconCol3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.howArrowCol4 {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.howIconCol5 {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+.howStepsGrid .whyImagePanel {
+  width: 104px;
+  max-width: 104px;
+  min-height: 104px;
+  aspect-ratio: 1;
+  padding: 12px;
+}
+
+.howStepsGrid .whyIconImage {
+  max-height: 56px;
+}
+
+.howArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 clamp(4px, 1.2vw, 10px);
+  height: 104px;
+}
+
+.howArrowImg {
+  width: clamp(22px, 3.8vw, 34px);
+  height: auto;
+  max-height: 40px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.howCaption {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  font-size: clamp(14px, 1.6vw, 17px);
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: center;
+  text-wrap: balance;
+  color: #eddec1;
+}
+
+.howCaptionCol1 {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: center;
+}
+
+.howCaptionCol3 {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: center;
+}
+
+.howCaptionCol5 {
+  grid-column: 5;
+  grid-row: 2;
+  justify-self: center;
+}
+
+@media (max-width: 1024px) {
+  .zestawHowGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .phone {
-    right: 100px;
+  .zestawHowSetTitle,
+  .howTitle,
+  .howIntro {
+    text-align: center;
+    max-width: none;
+  }
+
+  .zestawHowLeft {
+    align-items: center;
+  }
+
+  .howStepsGrid {
+    max-width: min(380px, 100%);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-@media (max-width: 968px) {
-  .main {
-    padding: 40px 24px 80px;
-  }
-
-  .hero {
-    width: 100%;
-  }
-
-  .headline {
-    font-size: 42px;
-    white-space: normal;
-  }
-
-  .sushiBox {
-    width: 300px;
-    height: 280px;
-  }
-
-  .phone {
-    width: 120px;
-    height: 240px;
-    right: 50px;
-  }
-
-  .vendingMachine {
-    margin-right: 0;
-  }
-
-  .vendingImage {
-    max-width: 420px;
-  }
-
-  .boxTokyoSection {
-    margin-top: 36px;
-  }
-
-  .infoText {
-    font-size: 20px;
-  }
-
-  .description {
-    width: min(760px, calc(100vw - 20px));
-    padding-left: clamp(64px, 16vw, 160px);
-    font-size: 21px;
-  }
-
-  .ingredients {
-    display: none;
+@media (max-width: 900px) {
+  .whyGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 768px) {
-  .main {
-    padding: 28px 16px 6px;
+  .heroSplitImages {
+    min-height: clamp(220px, 42vw, 400px);
   }
 
-  .hero {
-    width: 100%;
-    margin-bottom: 0;
+  .heroSplitCell {
+    min-height: clamp(220px, 42vw, 400px);
   }
 
-  .headline {
-    font-size: 32px;
-    margin-bottom: 14px;
-    text-align: center;
-  }
-
-  .zestawSliderTrack {
-    grid-template-columns: 1fr;
+  .heroSplitContent {
     gap: 12px;
+    padding: 16px 12px;
   }
 
-  .zestawSliderViewport {
-    margin-bottom: 14px;
-  }
-
-  .zestawImage {
-    height: 220px;
-  }
-
-  .slogan {
-    width: 100vw;
-    gap: 10px;
-    justify-content: center;
-    left: calc(50% - 50vw);
-    margin-bottom: 14px;
-  }
-
-  .sloganText {
-    font-size: 18px;
-    text-align: center;
-    white-space: normal;
-  }
-
-  .description {
-    width: calc(100vw - 14px);
-    padding: 14px 16px 14px 48px;
-    font-size: 17px;
-    margin-bottom: 16px;
-    border-radius: 0 10px 10px 0;
-  }
-
-  .ctaButtons {
+  .heroSplitCtas {
     width: 100%;
-    flex-direction: column;
-    gap: 10px;
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    margin-top: 6px;
   }
 
-  .ctaPrimary,
-  .ctaSecondary {
+  .heroSplitCtas .ctaPrimary,
+  .heroSplitCtas .ctaSecondary {
     width: 100%;
     text-align: center;
     padding: 12px 20px;
   }
 
-  .showcase {
-    margin-top: 16px;
+  .whyGrid {
     grid-template-columns: 1fr;
-    align-items: stretch;
-    gap: 20px;
-  }
-
-  .sushiBox {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-    height: 250px;
-    margin: 40px auto;
-  }
-
-  .phone {
-    position: relative;
-    width: 120px;
-    height: 224px;
-    margin: 20px auto;
-    right: auto;
-  }
-
-  .vendingMachine {
-    position: relative;
-    max-width: none;
+    max-width: 280px;
     margin: 0 auto;
-    right: auto;
-    top: auto;
   }
 
-  .vendingImage {
-    max-width: 360px;
-  }
-
-  .boxTokyoSection {
-    margin-top: 28px;
-  }
-  .boxTokyoImage {
-    width: 70%;
-  }
-
-  .infoText {
-    font-size: 18px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(31, 71, 54, 0.18);
+  .whyImagePanel {
+    max-width: 220px;
   }
 }

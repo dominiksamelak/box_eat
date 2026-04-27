@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
-import styles from "../page.module.css";
+import styles from "./ZestawSlider.module.css";
 import zestaw1Img from "../../img/zestaw1.jpg";
 import zestaw2Img from "../../img/zestaw2.jpg";
 import zestaw3Img from "../../img/zestaw3.jpg";

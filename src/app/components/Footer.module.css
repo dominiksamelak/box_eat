@@ -1,7 +1,7 @@
 .footer {
   margin-top: 56px;
   border-top: 1px solid rgba(237, 222, 193, 0.22);
-  background-color: #1f4736;
+  background-color: var(--background);
 }
 
 .inner {
