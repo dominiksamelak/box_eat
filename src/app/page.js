@@ -23,47 +23,49 @@ export default function Home() {
           className={styles.heroSplit}
           aria-label="BOX EAT — główna grafika"
         >
-          <div className={styles.heroSplitImages}>
-            <div className={styles.heroSplitCell}>
-              <Image
-                src={sushiMainImg}
-                alt="Świeże sushi BOX EAT"
-                fill
-                sizes="50vw"
-                className={styles.heroSplitImg}
-                priority
-              />
-            </div>
-            <div className={styles.heroSplitCell}>
-              <Image
-                src={vendingNightImg}
-                alt="Automat vending BOX EAT nocą"
-                fill
-                sizes="50vw"
-                className={styles.heroSplitImg}
-                priority
-              />
-            </div>
-          </div>
-          <div className={styles.heroSplitOverlay}>
-            <div className={styles.heroSplitContent}>
-              <h1 className={styles.heroSplitTitle}>
-                ŚWIEŻE SUSHI I GOTOWE POSIŁKI 24/7
-              </h1>
-              <p className={styles.heroSplitTagline}>
-                Inteligentny vending premium.
-                <br />
-                Odbierz zestaw w 15 sekund
-              </p>
-              <div className={styles.heroSplitCtas}>
-                <Link href="/menu" className={styles.ctaPrimary}>
-                  ZOBACZ MENU
-                </Link>
-                <Link href="/znajdz-automat" className={styles.ctaSecondary}>
-                  ZNAJDŹ AUTOMAT
-                </Link>
+          <div className={styles.heroSplitVisual}>
+            <div className={styles.heroSplitImages}>
+              <div className={styles.heroSplitCell}>
+                <Image
+                  src={sushiMainImg}
+                  alt="Świeże sushi BOX EAT"
+                  fill
+                  sizes="50vw"
+                  className={styles.heroSplitImg}
+                  priority
+                />
+              </div>
+              <div className={styles.heroSplitCell}>
+                <Image
+                  src={vendingNightImg}
+                  alt="Automat vending BOX EAT nocą"
+                  fill
+                  sizes="50vw"
+                  className={styles.heroSplitImg}
+                  priority
+                />
               </div>
             </div>
+            <div className={styles.heroSplitOverlay}>
+              <div className={styles.heroSplitTextBlock}>
+                <h1 className={styles.heroSplitTitle}>
+                  ŚWIEŻE SUSHI I GOTOWE POSIŁKI 24/7
+                </h1>
+                <p className={styles.heroSplitTagline}>
+                  Inteligentny vending premium.
+                  <br />
+                  Odbierz zestaw w 15 sekund
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.heroSplitCtas}>
+            <Link href="/menu" className={styles.ctaPrimary}>
+              ZOBACZ MENU
+            </Link>
+            <Link href="/znajdz-automat" className={styles.ctaSecondary}>
+              ZNAJDŹ AUTOMAT
+            </Link>
           </div>
         </section>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 
@@ -13,17 +13,23 @@ export default function Navbar() {
   const lastScrollY = useRef(0);
   const navRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    const el = navRef.current;
+    if (!el) return;
+
     const updateLayout = () => {
       setIsMobile(window.innerWidth <= 768);
-      setNavHeight(navRef.current?.offsetHeight ?? 0);
+      setNavHeight(el.offsetHeight);
     };
 
     updateLayout();
     window.addEventListener("resize", updateLayout);
+    const ro = new ResizeObserver(updateLayout);
+    ro.observe(el);
 
     return () => {
       window.removeEventListener("resize", updateLayout);
+      ro.disconnect();
     };
   }, []);
 

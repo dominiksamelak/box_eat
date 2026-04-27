@@ -21,6 +21,11 @@
   flex: 1 0 auto;
 }
 
+.heroSplitVisual {
+  position: relative;
+  width: 100%;
+}
+
 .heroSplitImages {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -54,7 +59,7 @@
   pointer-events: none;
 }
 
-.heroSplitContent {
+.heroSplitTextBlock {
   pointer-events: auto;
   display: flex;
   flex-direction: column;
@@ -63,6 +68,7 @@
   gap: 14px;
   padding: 24px 16px;
   max-width: min(920px, 100%);
+  width: 100%;
 }
 
 .heroSplitTitle {
@@ -87,9 +93,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  margin-top: 10px;
-  width: min(520px, 100%);
+  width: min(520px, calc(100% - 32px));
   justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: clamp(18px, 3vw, 36px);
+  transform: translateX(-50%);
+  z-index: 2;
+  box-sizing: border-box;
 }
 
 .heroSplitCtas .ctaPrimary,
@@ -396,6 +407,11 @@
 }
 
 @media (max-width: 768px) {
+  .heroSplit {
+    display: flex;
+    flex-direction: column;
+  }
+
   .heroSplitImages {
     min-height: clamp(220px, 42vw, 400px);
   }
@@ -404,16 +420,22 @@
     min-height: clamp(220px, 42vw, 400px);
   }
 
-  .heroSplitContent {
+  .heroSplitTextBlock {
     gap: 12px;
     padding: 16px 12px;
   }
 
   .heroSplitCtas {
+    position: static;
+    left: auto;
+    bottom: auto;
+    transform: none;
     width: 100%;
     max-width: 320px;
     grid-template-columns: 1fr;
-    margin-top: 6px;
+    margin: 0 auto;
+    padding: 20px 16px 24px;
+    background-color: var(--background);
   }
 
   .heroSplitCtas .ctaPrimary,

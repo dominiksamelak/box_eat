@@ -19,6 +19,15 @@
 
 .navbarSpacer {
   width: 100%;
+  flex-shrink: 0;
+  /* Reserve space before JS measure runs; matches bar padding + logo row */
+  min-height: 72px;
+}
+
+@media (max-width: 768px) {
+  .navbarSpacer {
+    min-height: 76px;
+  }
 }
 
 .navbarScrolled {
