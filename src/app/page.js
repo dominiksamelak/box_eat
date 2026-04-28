@@ -87,7 +87,7 @@ export default function Home() {
                   className={styles.whyIconImage}
                 />
               </div>
-              <p className={styles.whyCaption}>15 sekund</p>
+              <p className={styles.whyCaption}>Odbiór w 15 sekund</p>
             </div>
             <div className={styles.whyItem}>
               <div className={styles.whyImagePanel}>
@@ -155,7 +155,9 @@ export default function Home() {
                   kompromisów.
                 </p>
                 <div className={styles.howStepsGrid}>
-                  <div className={`${styles.howIconCell} ${styles.howIconCol1}`}>
+                  <div
+                    className={`${styles.howIconCell} ${styles.howIconCol1}`}
+                  >
                     <div className={styles.whyImagePanel}>
                       <Image
                         src={choiceImg}
@@ -166,7 +168,10 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <div className={`${styles.howArrow} ${styles.howArrowCol2}`} aria-hidden>
+                  <div
+                    className={`${styles.howArrow} ${styles.howArrowCol2}`}
+                    aria-hidden
+                  >
                     <Image
                       src={arrowImg}
                       alt=""
@@ -175,7 +180,9 @@ export default function Home() {
                       className={styles.howArrowImg}
                     />
                   </div>
-                  <div className={`${styles.howIconCell} ${styles.howIconCol3}`}>
+                  <div
+                    className={`${styles.howIconCell} ${styles.howIconCol3}`}
+                  >
                     <div className={styles.whyImagePanel}>
                       <Image
                         src={takeImg}
@@ -186,7 +193,10 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <div className={`${styles.howArrow} ${styles.howArrowCol4}`} aria-hidden>
+                  <div
+                    className={`${styles.howArrow} ${styles.howArrowCol4}`}
+                    aria-hidden
+                  >
                     <Image
                       src={arrowImg}
                       alt=""
@@ -195,7 +205,9 @@ export default function Home() {
                       className={styles.howArrowImg}
                     />
                   </div>
-                  <div className={`${styles.howIconCell} ${styles.howIconCol5}`}>
+                  <div
+                    className={`${styles.howIconCell} ${styles.howIconCol5}`}
+                  >
                     <div className={styles.whyImagePanel}>
                       <Image
                         src={tasteImg}
@@ -206,13 +218,19 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <p className={`${styles.whyCaption} ${styles.howCaption} ${styles.howCaptionCol1}`}>
+                  <p
+                    className={`${styles.whyCaption} ${styles.howCaption} ${styles.howCaptionCol1}`}
+                  >
                     Wybierz
                   </p>
-                  <p className={`${styles.whyCaption} ${styles.howCaption} ${styles.howCaptionCol3}`}>
+                  <p
+                    className={`${styles.whyCaption} ${styles.howCaption} ${styles.howCaptionCol3}`}
+                  >
                     Zabierz
                   </p>
-                  <p className={`${styles.whyCaption} ${styles.howCaption} ${styles.howCaptionCol5}`}>
+                  <p
+                    className={`${styles.whyCaption} ${styles.howCaption} ${styles.howCaptionCol5}`}
+                  >
                     Smakuj
                   </p>
                 </div>

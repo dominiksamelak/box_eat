@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
+import ImageDownloadGuard from "./components/ImageDownloadGuard";
 import PageTransition from "./components/PageTransition";
 
 const geistSans = Geist({
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pl">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <ImageDownloadGuard />
         <PageTransition>
           <div className="siteContent">{children}</div>
         </PageTransition>

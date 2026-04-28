@@ -12,7 +12,8 @@ import zestaw6Img from "../../img/zestaw6.jpg";
 import zestaw7Img from "../../img/zestaw7.jpg";
 import zestaw8Img from "../../img/zestaw8.jpg";
 
-const SLIDE_INTERVAL_MS = 3000;
+const SLIDE_INTERVAL_MS = 5000;
+const FADE_MS = 220;
 const PAGE_SIZE = 4;
 
 const slides = [
@@ -32,33 +33,48 @@ function pageSlides(start) {
 
 export default function ZestawGridSlider() {
   const [startIndex, setStartIndex] = useState(0);
+  const [fadeVisible, setFadeVisible] = useState(true);
 
   useEffect(() => {
+    let swapTimerId;
+
     const timer = setInterval(() => {
-      setStartIndex((prev) => (prev + PAGE_SIZE) % slides.length);
+      window.clearTimeout(swapTimerId);
+      setFadeVisible(false);
+      swapTimerId = window.setTimeout(() => {
+        setStartIndex((prev) => (prev + PAGE_SIZE) % slides.length);
+        setFadeVisible(true);
+      }, FADE_MS);
     }, SLIDE_INTERVAL_MS);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+      window.clearTimeout(swapTimerId);
+    };
   }, []);
 
   const cells = useMemo(() => pageSlides(startIndex), [startIndex]);
 
   return (
     <div className={styles.viewport} aria-label="Slider zestawów 2×2">
-      <div className={styles.track}>
-        {cells.map((slide, index) => (
-          <div className={styles.card} key={`${startIndex}-${slide.src}-${index}`}>
-            <Image
-              src={slide}
-              alt={`Zestaw ${(startIndex + index) % slides.length + 1}`}
-              width={slide.width}
-              height={slide.height}
-              className={styles.image}
-              sizes="(max-width: 768px) 45vw, 22vw"
-              priority={startIndex === 0 && index === 0}
-            />
-          </div>
-        ))}
+      <div
+        className={`${styles.fadeWrap} ${fadeVisible ? "" : styles.fadeWrapHidden}`}
+      >
+        <div className={styles.track} key={startIndex}>
+          {cells.map((slide, index) => (
+            <div className={styles.card} key={index}>
+              <Image
+                src={slide}
+                alt={`Zestaw ${((startIndex + index) % slides.length) + 1}`}
+                width={slide.width}
+                height={slide.height}
+                className={styles.image}
+                sizes="(max-width: 768px) 45vw, 22vw"
+                priority={startIndex === 0 && index === 0}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
